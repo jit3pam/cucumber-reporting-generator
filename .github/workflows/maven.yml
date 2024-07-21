@@ -38,6 +38,7 @@ jobs:
         cd cucumber-html-reports && ls -lah
         mv overview-features.html index.html
         git checkout -b gh-pages
+        git add .
         git commit -m "update reports"
         git push origin gh-pages
       env:
