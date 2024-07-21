@@ -35,11 +35,11 @@ jobs:
       run: |
         ls -lah target/cucumber-html-reports
 
-    - name: publish html reports2
-      run: |
-        mv overview-features.html index.html
-        git checkout -b gh-pages
-        git commit -m "update reports"
-        git push origin gh-pages
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#    - name: publish html reports2
+#      run: |
+#        mv overview-features.html index.html
+#        git checkout -b gh-pages
+#        git commit -m "update reports"
+#        git push origin gh-pages
+#      env:
+#        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
