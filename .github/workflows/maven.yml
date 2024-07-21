@@ -31,17 +31,8 @@ jobs:
     - name: Build with Maven
       run: mvn -B package -Dtest=RunTests --file pom.xml
 
-    - name: publish html reports
-      run: |
-        ls -lah target/cucumber-html-reports/cucumber-html-reports
-        mv target/cucumber-html-reports/cucumber-html-reports/ cucumber-html-reports/
-        cd cucumber-html-reports && ls -lah
-        mv overview-features.html index.html
-        git config --global user.email "github-bot@github.com"
-        git config --global user.name "github-bot@github.com"
-        git checkout -b gh-pages
-        git add .
-        git commit -m "update reports"
-        git push origin gh-pages
-      env:
-        GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+    - uses: peaceiris/actions-gh-pages@v3
+      with:
+        personal_token: ${{ secrets.GH_PAT }}
+        publish_branch: master
+        publish_dir: target/cucumber-html-reports/cucumber-html-reports
