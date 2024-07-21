@@ -34,8 +34,8 @@ jobs:
     - name: publish html reports
       run: |
         ls -lah target/cucumber-html-reports/cucumber-html-reports
-        mkdir reports && cp -rf target/cucumber-html-reports/cucumber-html-reports/*.* reports/
-        ls -lah reports
+        mv target/cucumber-html-reports/cucumber-html-reports/ cucumber-html-reports/
+        cd cucumber-html-reports && ls -lah
 
 #    - name: publish html reports2
 #      run: |
