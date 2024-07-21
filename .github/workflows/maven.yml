@@ -27,5 +27,16 @@ jobs:
         java-version: '11'
         distribution: 'corretto'
         cache: maven
+
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+
+    - name: publish html reports
+      run: |
+        git checkout -b gh-pages
+        git add target/cucumber-html-reports
+        mv overview-features.html index.html
+        git commit -m "update reports"
+        git push origin gh-pages
+      env:
+        GITHUB_TOKEN: ${{ GITHUB_TOKEN }}
