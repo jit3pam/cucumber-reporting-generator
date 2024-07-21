@@ -33,7 +33,7 @@ jobs:
 
     - name: publish html reports
       run: |
-        ls -lah target/cucumber-html-reports
+        ls -lah target/cucumber-html-reports/cucumber-html-reports
 
 #    - name: publish html reports2
 #      run: |
