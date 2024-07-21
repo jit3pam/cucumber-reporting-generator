@@ -35,10 +35,12 @@ jobs:
       run: |
         mkdir reports && mv target/cucumber-html-reports reports/
         cd reports/cucumber-html-reports
-        ls -la
-        git checkout -b gh-pages
-        git add .
+        ls -lah
+
+    - name: publish html reports2
+      run: |
         mv overview-features.html index.html
+        git checkout -b gh-pages
         git commit -m "update reports"
         git push origin gh-pages
       env:
