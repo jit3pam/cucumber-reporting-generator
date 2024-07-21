@@ -32,10 +32,12 @@ jobs:
       run: mvn -B package -Dtest=RunTests --file pom.xml
 
     - name: Create a Directory
-      run: mkdir reports && mv target/cucumber-html-reports reports/ && cd reports/
+      run: mkdir reports && mv target/cucumber-html-reports reports/
 
     - name: publish html reports
       run: |
+        cd reports/
+        ls -la
         git checkout -b gh-pages
         git add .
         mv overview-features.html index.html
