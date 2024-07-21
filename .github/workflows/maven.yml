@@ -37,6 +37,8 @@ jobs:
         mv target/cucumber-html-reports/cucumber-html-reports/ cucumber-html-reports/
         cd cucumber-html-reports && ls -lah
         mv overview-features.html index.html
+        git config --global user.email "github-bot@github.com"
+        git config --global user.name "github-bot@github.com"
         git checkout -b gh-pages
         git add .
         git commit -m "update reports"
