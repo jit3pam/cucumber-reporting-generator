@@ -33,8 +33,8 @@ jobs:
 
     - name: publish html reports
       run: |
-        mkdir reports && mv target/cucumber-html-reports reports/
-        cd reports/cucumber-html-reports
+        mkdir reports && cp -r target/cucumber-html-reports/*.* reports/
+        cd reports/
         ls -lah
 
     - name: publish html reports2
