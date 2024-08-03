@@ -29,10 +29,11 @@ jobs:
         cache: maven
 
     - name: Build with Maven
-      run: mvn -B package -Dtest=RunTests --file pom.xml
+      run: |
+        mvn verify -Dtest=RunTests --file pom.xml
+        cp target/cucumber-html-reports/cucumber-html-reports/overview-features.html target/cucumber-html-reports/cucumber-html-reports/index.html
 
     - uses: peaceiris/actions-gh-pages@v3
       with:
-        personal_token: ${{ secrets.GH_PAT }}
-        publish_branch: master
+        personal_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: target/cucumber-html-reports/cucumber-html-reports
