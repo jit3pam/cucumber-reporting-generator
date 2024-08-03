@@ -8,7 +8,15 @@
   <packaging>jar</packaging>
 
   <name>cucumber-reporting-gen</name>
-  <url>http://maven.apache.org</url>
+<!--   <url>http://maven.apache.org</url> -->
+  
+  <distributionManagement>
+   <repository>
+     <id>github</id>
+     <name>jit3pam</name>
+     <url>https://maven.pkg.github.com/jit3pam/cucumber-reporting-generator</url>
+   </repository>
+</distributionManagement>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
