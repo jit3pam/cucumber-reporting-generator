@@ -37,3 +37,6 @@ jobs:
       with:
         personal_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: target/cucumber-html-reports/cucumber-html-reports
+
+    - name: deploy
+      run: mvn deploy
