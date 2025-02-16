@@ -4,22 +4,34 @@
 
   <groupId>me.jit3pam.cucumber</groupId>
   <artifactId>cucumber-reporting-gen</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0.0</version>
   <packaging>jar</packaging>
 
   <name>cucumber-reporting-gen</name>
-<!--   <url>http://maven.apache.org</url> -->
-  
+  <url>http://maven.apache.org</url>
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <name>Jitendra Singh</name>
+      <email>Jitendra_Singh2@epam.com</email>
+    </developer>
+  </developers>
+
   <distributionManagement>
-   <snapshotRepository>
-     <id>ossrh</id>
-     <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    <snapshotRepository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
     </snapshotRepository>
     <repository>
-     <id>ossrh</id>
-     <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
     </repository>
-</distributionManagement>
+  </distributionManagement>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
