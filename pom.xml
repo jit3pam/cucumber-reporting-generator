@@ -16,6 +16,10 @@
      <name>jit3pam</name>
      <url>https://maven.pkg.github.com/jit3pam/cucumber-reporting-generator</url>
    </repository>
+    <repository>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
 </distributionManagement>
 
   <properties>
